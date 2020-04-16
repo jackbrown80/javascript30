@@ -1,0 +1,30 @@
+Array Functions
+
+Array.filter(): Filters the array by a given property e.g.
+const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600))
+
+Array.map(): Creates a new array by performing a defined function on each element of the original array e.g.
+const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+
+Array.sort(): Sorts an array by comparing each element to the one before it and rating it either 1 or -1 e.g.
+const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+
+Array.reduce(): Reduces the array to one number and goes from left to right. Can be used to add all numbers, multiply them etc.
+
+Array.some(): Some will check that there is at least one match in the array e.g.
+const isAdult = people.some(person => {
+  const currentYear = (new Date()).getFullYear();
+  return currentYear - person.year >= 19;
+})
+
+Array.every(): Checks if everything in the array passed the condition e.g.
+const allAdults = people.every(person => {
+  const currentYear = (new Date()).getFullYear();
+  return currentYear - person.year >= 19;
+})
+
+Array.find(): Returns the first match in the array e.g.
+const comment = comments.find(comment => comment.id === 823423);
+
+Array.findIndex(): Finds the index of the bit that matches the given conditions e.g.
+const index = comments.findIndex(comment => comment.id === 823423);
